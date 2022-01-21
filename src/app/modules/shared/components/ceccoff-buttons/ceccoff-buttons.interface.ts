@@ -2,7 +2,7 @@ import { CeccoffButtonColor, CeccoffButtonType } from './ceccoff-buttons.type';
 
 export interface CeccoffButton {
   label: string;
-  arialLabel: string;
+  ariaLabel: string;
   color: CeccoffButtonColor;
   type: CeccoffButtonType;
   icon?: string;
