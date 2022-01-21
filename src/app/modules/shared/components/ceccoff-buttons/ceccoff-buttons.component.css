@@ -1,6 +1,10 @@
 @media screen and (min-width: 30em) and (orientation: landscape) {
+  button {
+    flex-direction: row;
+  }
   button:nth-child(1n + 2) {
-    margin-left: 10px;
+    gap: 1em;
+    background-color: blue;
   }
 }
 @media screen and (max-width: 30em) and (orientation: landscape) {
@@ -8,6 +12,7 @@
     width: 100%;
   }
   button:nth-child(1n + 2) {
-    margin-top: 10px;
+    gap: 1em;
+    background-color: red;
   }
 }
