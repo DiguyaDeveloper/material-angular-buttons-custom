@@ -1,0 +1,15 @@
+<ng-container *ngFor="let item of stream | async as list">
+  <button
+    mat-button
+    [ngClass]="button.type"
+    [mat-dialog-close]="button.close"
+    [arial-label]="button.arialLabel"
+    [color]="button.color"
+    [disabled]="button.disabled"
+    [hidden]="button.hidden"
+    (click)="click(button)"
+  >
+    <mat-icon *ngIf="button.icon">{{ button.icon }}</mat-icon>
+    {{ button.label }}
+  </button>
+</ng-container>
