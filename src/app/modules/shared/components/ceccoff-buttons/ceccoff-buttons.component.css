@@ -1,0 +1,13 @@
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  button:nth-child(1n + 2) {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 30em) and (orientation: landscape) {
+  button {
+    width: 100%;
+  }
+  button:nth-child(1n + 2) {
+    margin-top: 10px;
+  }
+}
