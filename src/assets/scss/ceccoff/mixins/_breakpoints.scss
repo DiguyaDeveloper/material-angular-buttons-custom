@@ -1,5 +1,3 @@
-@import '../variables.scss';
-
 @mixin breakpoint($display) {
   @each $key, $value in $breakpoint {
     //  defining max-width
