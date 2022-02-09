@@ -7,10 +7,15 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ceccoff",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "styleext": "scss",
+          "prefix": "ceccoff"
+        },
+        "@schematics/angular:directive": {
+          "prefix": "ceccoff"
         }
       },
       "architect": {
@@ -23,7 +28,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css", "src/assets/scss/ceccoff.scss"],
+            "styles": [
+              "src/styles.css",
+              "src/assets/scss/ceccoff/ceccoff.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -70,7 +78,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": ["src/styles.css", "src/assets/scss/ceccoff.scss"],
+            "styles": [
+              "src/styles.css",
+              "src/assets/scss/ceccoff/ceccoff.scss"
+            ],
             "scripts": [],
             "assets": ["src/favicon.ico", "src/assets"]
           }

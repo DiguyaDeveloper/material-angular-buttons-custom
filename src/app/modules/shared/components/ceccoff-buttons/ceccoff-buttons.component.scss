@@ -17,24 +17,4 @@
       background-color: green;
     }
   }
-  @include breakpoint(mobile) {
-    @include orientation(landscape) {
-      flex-direction: column;
-      button {
-        width: 100%;
-      }
-      button:nth-child(1n + 2) {
-        background-color: red;
-      }
-    }
-    @include orientation(portrait) {
-      flex-direction: column;
-      button {
-        width: 100%;
-      }
-      button:nth-child(1n + 2) {
-        background-color: yellow;
-      }
-    }
-  }
 }
