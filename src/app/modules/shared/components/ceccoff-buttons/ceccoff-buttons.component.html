@@ -1,15 +1,17 @@
-<ng-container *ngFor="let button of buttons | async as list">
-  <button
-    mat-button
-    [ngClass]="button.type"
-    [mat-dialog-close]="button.close"
-    [aria-label]="button.ariaLabel"
-    [color]="button.color"
-    [disabled]="button.disabled"
-    [hidden]="button.hidden"
-    (click)="click(button)"
-  >
-    <mat-icon *ngIf="button.icon">{{ button.icon }}</mat-icon>
-    {{ button.label }}
-  </button>
-</ng-container>
+<section class="container-buttons">
+  <ng-container *ngFor="let button of buttons | async as list">
+    <button
+      mat-button
+      [ngClass]="button.type"
+      [mat-dialog-close]="button.close"
+      [aria-label]="button.ariaLabel"
+      [color]="button.color"
+      [disabled]="button.disabled"
+      [hidden]="button.hidden"
+      (click)="click(button)"
+    >
+      <mat-icon *ngIf="button.icon">{{ button.icon }}</mat-icon>
+      {{ button.label }}
+    </button>
+  </ng-container>
+</section>
