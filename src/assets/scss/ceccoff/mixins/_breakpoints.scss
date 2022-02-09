@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+@mixin breakpoint($display) {
+  @each $key, $value in $breakpoint {
+    //  defining max-width
+    @if ($display == $key) {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin orientation($orientation) {
+  @each $key, $value in $orientation {
+    //  defining orientation
+    @if ($orientation == $key) {
+      @media (orientation: $value) {
+        @content;
+      }
+    }
+  }
+}

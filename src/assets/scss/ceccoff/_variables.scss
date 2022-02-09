@@ -1,7 +1,12 @@
-$bp: (
+$breakpoint: (
   mobile: 480px,
   tablet: 768px,
   desktop: 1440px,
+);
+
+$orientation: (
+  landscape: 'landscape',
+  portrait: 'portrait',
 );
 
 $gap: 4vh;

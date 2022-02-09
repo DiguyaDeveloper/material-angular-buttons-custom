@@ -1,37 +1,40 @@
-
 .container-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  gap: $gap;
   flex-wrap: wrap;
 }
 
-/*Mobile*/
-@media screen and (min-width: 30em) and (orientation: landscape) {
-  button:nth-child(1n + 2) {
-    background-color: blue;
+.container-buttons {
+  @media screen and (min-width: 30em) and (orientation: landscape) {
+    flex-direction: row;
+    button:nth-child(1n + 2) {
+      background-color: blue;
+    }
   }
-}
-@media screen and (min-width: 30em) and (orientation: portrait) {
-  button:nth-child(1n + 2) {
-    background-color: green;
+  @media screen and (min-width: 30em) and (orientation: portrait) {
+    flex-direction: row;
+    button:nth-child(1n + 2) {
+      background-color: green;
+    }
   }
-}
-
-/*Desktop*/
-@media screen and (max-width: 30em) and (orientation: landscape) {
-  button {
-    width: 100%;
-  }
-  button:nth-child(1n + 2) {
-    background-color: red;
-  }
-}
-@media screen and (max-width: 30em) and (orientation: portrait) {
-  button {
-    width: 100%;
-  }
-  button:nth-child(1n + 2) {
-    background-color: yellow;
+  @include breakpoint(mobile) {
+    @include orientation(landscape) {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+      button:nth-child(1n + 2) {
+        background-color: red;
+      }
+    }
+    @include orientation(portrait) {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+      button:nth-child(1n + 2) {
+        background-color: yellow;
+      }
+    }
   }
 }
